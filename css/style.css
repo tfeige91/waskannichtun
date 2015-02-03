@@ -7,6 +7,10 @@ body{
 	font-family: helvetica, sans-serif;
 }
 
+/*
+	Kopfzeile	
+*/	
+
 .headarea{
 	text-align: center;
 	background-color:  #16B587;
@@ -63,6 +67,11 @@ a, a:visited {
 	margin: 0 auto;
 }
 
+
+/*
+	Placeholdertext	
+*/	
+
 ::-webkit-input-placeholder {
 	font-size: 14px;
     text-align: center;
@@ -87,6 +96,16 @@ a, a:visited {
    font-weight: 200;
 }
 
+
+
+
+/*
+	Searchform	
+*/	
+
+
+
+
 .form-wrapper{
 	width: 80%;
 	display: block;
@@ -109,6 +128,43 @@ a, a:visited {
 	border-radius: 5px;
 }
 
+
+
+/*
+	Checkboxes	
+*/
+
+.checkbox-wrapper{
+	width: 70%;
+	margin: 40px auto 0 auto;	
+}
+
+.einschraenkungen {
+	font-weight: 300;
+	margin: 25px;
+}
+
+.einschraenkungen label{
+	display: block;
+	cursor: pointer;
+	width: intrinsic;
+	font-size: 14px;
+}
+
+
+.einschraenkungen input{
+	margin-right: 12px;
+	margin-bottom: 10px;
+	height: 14px;
+	width: 14px;
+	cursor: pointer;
+	color: #16B587;
+}
+
+/*
+	Ergebnisse	
+*/	
+
 .ergebnis-wrapper{
 	margin: 50px auto;
 	min-height: 400px;
@@ -120,3 +176,8 @@ a, a:visited {
 	text-align: justify;
 	padding: 12px;
 }
+
+
+
+
+

@@ -1,7 +1,7 @@
 <?php
 
 class Input{
-    public static function exists($type = 'post'){
+    public static function exists($type){
         switch($type)
             {
                 case 'post':
@@ -9,7 +9,7 @@ class Input{
                 break;
                 
                 case 'get':
-                    return (!empty($GET)) ? true: false;
+                    return (!empty($_GET)) ? true: false;
                 break;
                 
                 default:
