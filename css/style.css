@@ -1,0 +1,122 @@
+*{	
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: helvetica, sans-serif;
+}
+
+.headarea{
+	text-align: center;
+	background-color:  #16B587;
+	width: 100%;
+	height: 50px;
+}
+
+
+h1{
+	display: inline;
+	float: left;
+	color: white;
+	font-weight: 300;
+	font-size: 24px;
+	padding: 13px 0;
+	margin-left: 80px;
+}
+
+
+.headbuttons ul{
+	display: inline;
+	float: right;
+	width:40%;
+	font-size: 20px;
+}
+
+.headbuttons li{
+	text-align: center;
+	list-style: none;
+	float: right;
+	padding: 15px 0 40px; 0;
+	margin: 0 40px;
+}
+
+
+.headbuttons li a{
+	font-weight: 300;
+	color: white;	
+}
+
+.headbuttons li a:hover{
+	color: #757575;
+}
+
+
+a, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+.container{
+	min-height: 800px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+::-webkit-input-placeholder {
+	font-size: 14px;
+    text-align: center;
+    font-weight: 200;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-size: 14px;
+	text-align: center;
+	font-weight: 200;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 14px;
+	text-align: center;
+	font-weight: 200;
+}	
+
+:-ms-input-placeholder {  
+    font-size: 14px;
+   text-align: center;
+   font-weight: 200;
+}
+
+.form-wrapper{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+.searchform{
+	
+	display: block;
+	margin-top: 100px;
+	
+}
+
+#search {
+	margin: 0 auto;
+	display: block;
+	height: 50px;
+	width: 50%;
+	border: 4px solid #16B587;
+	border-radius: 5px;
+}
+
+.ergebnis-wrapper{
+	margin: 50px auto;
+	min-height: 400px;
+	width: 75%;
+	border: 4px solid black;
+	border-radius: 5px;
+	font-weight: 300;
+	line-height: 1.2;
+	text-align: justify;
+	padding: 12px;
+}
