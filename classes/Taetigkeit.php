@@ -1,5 +1,8 @@
 <?php
 
+require_once 'DB.php';
+require_once 'Input.php';
+
 class Taetigkeit{
 	
 	//properties
@@ -29,12 +32,45 @@ class Taetigkeit{
 				 
 				while($row = $this->_results->fetch_assoc())
 				 	{
-					 	echo "<h3>" .$row['name']. "</h3><div>". $row['inhalt'] . "</div>";
+					 	echo "<h3 class='taetigkeit".$row['id']."'>" .$row['name']. "</h3><div class='taetigkeit".$row['id']."'>". $row['inhalt'] . "</div>";
 					 	
 					}
 				echo "</div>";
 				echo "</div>";
 
+			}
+		
+	}
+	
+	public function filterByEinschraenkung($where){
+		
+		if($this->_input->exists('post'))
+			{	
+				/*$notThis = array_values($not);
+				
+				foreach ($notThis as $where)
+				*/
+					{
+					
+						$query = "SELECT `id_taetigkeit` FROM taetigkeit_einschraenkung WHERE id_einschraenkung = {$where}";
+						$this->_results = $this->_db->select($query);
+						if($this->_results)
+							{
+								while($row = $this->_results->fetch_assoc())
+								{
+									echo "taetigkeit".$row['id_taetigkeit']."clu";
+								
+								}	
+							}
+						else
+							{
+								return false;
+							}	
+					
+					}
+					
+				
+				
 			}
 		
 	}

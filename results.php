@@ -19,13 +19,20 @@ $list = new Taetigkeit();
 	
 	<div class="container">
 		
-		<div class="form-wrapper">
+		<div class="body-wrapper">
 			<form class="searchform" action="results.php" method="get" accept-charset="utf-8">
-				
-				<input id="search" type="search" name="search" placeholder="mein Beruf" value="<?php if(isset($_GET['search'])){ echo $_GET['search'];} ?>" onclick="this.value =''">
-				
+				<div class="searchbar">
+				<input id="search" type="search" name="search" placeholder="mein Beruf" value="<?php if(isset($_GET['search'])){ echo $_GET['search'];} ?>" onclick="this.value =''">				
+				<button class="magnify hidden" type="submit"></button>
+				</div>
 			</form>
-		</div>		
+		</div>
+		
+		
+	<?php include_once('includes/checkboxes.php'); ?>	
+		
+		<!--
+		
 		<div class="checkbox-wrapper">
 		
 			<form class="einschraenkungen" method="post" action="results.php" accept-charset="utf-8">
@@ -62,6 +69,7 @@ $list = new Taetigkeit();
 		
 		</div>	
 			
+		-->	
 			<?php
 				
 				if(isset($_GET['search']))
@@ -76,15 +84,12 @@ $list = new Taetigkeit();
 				 
 			?>
 	
+		
+			
+			
 	</div>
 	
-<script>
-$(function() {
-    $( "#accordion" ).accordion({
-      collapsible: true
-    });
-  });
-</script>
+
 	
 </body>
 	

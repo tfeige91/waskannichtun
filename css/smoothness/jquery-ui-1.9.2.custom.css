@@ -6,6 +6,10 @@
 
 /* Layout helpers
 ----------------------------------*/
+*{
+	outline: none;
+}
+
 .ui-helper-hidden {
 	display: none;
 }
@@ -112,6 +116,11 @@
 	border-top: 0;
 	overflow: auto;
 }
+
+.ui-accordion:focus ui-accordion-header:focus .ui-accordion-header-icon:focus {
+	outline:0;
+}
+
 .ui-autocomplete {
 	position: absolute;
 	top: 0;
@@ -479,6 +488,7 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-menu .ui-state-focus,
 .ui-menu .ui-state-active {
+	
 	margin: -1px;
 }
 

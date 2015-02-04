@@ -15,9 +15,11 @@ $list = new Taetigkeit();
 
 ?>
 
+
 <?php include_once('includes/header.php'); ?>
 
 <body>
+	
 	
 <?php include_once('includes/topbar.php'); ?>
 	
