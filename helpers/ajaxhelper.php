@@ -3,12 +3,39 @@ require_once '../classes/Taetigkeit.php';
 
 $taetigkeit = new Taetigkeit();	
 
-$einschraenkung_id = $_POST['einschraenkung_id'];
+$result = "";
 
-$result = $taetigkeit->filterByEinschraenkung($einschraenkung_id);
+//$result = $taetigkeit->show();
 
-echo $result; //returns String
+if(isset($_POST['einschraenkung_id']))
+	{
+		
+		
+		$einschraenkung_id = $_POST['einschraenkung_id'];
+		
 
+		
+		for($i = 0; $i < count($einschraenkung_id); $i++)
+			{
+				foreach ($einschraenkung_id as $key => $id)
+				{
+					
+					$result = $taetigkeit->filterByEinschraenkung($id);
+					
+				} 	
+				
+			}
+				
+
+
+	}
+else
+	{
+		$result = $taetigkeit->show();
+	}
+	
+
+echo $result; //echo $result; //returns String
 
 
 ?>

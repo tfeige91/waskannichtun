@@ -21,57 +21,43 @@ $("document").ready(function() {
 		
 		var id = this.id;
 		
-		/*
+		
 		var selected = [];
 		var checkboxes = $(".einschraenkungen :checkbox");
 		
+	
 		
 		for (var i=0; i<checkboxes.length; i++) 
-			{
-				if (checkboxes[i].checked) 
-					{
-						selected.push(checkboxes[i].id);
-    				}
-			}
-		*/
-	
-		if(this.checked) //delete
-			{		
-				$.ajax({
-					type: 'POST',
-					url: "helpers/ajaxhelper.php",
-					data: {einschraenkung_id : id},
-					success:(function(ID){
-						var trimID = ID.trim();
-						var filteredTaetigkeiten =  trimID.split("clu");
-						
-						
-						filteredTaetigkeiten.forEach(function(taetigkeit){
-							$("."+taetigkeit).addClass('hidden');
-						});
-					})	
-				});
-				
+				{
+					if (checkboxes[i].checked) 
+						{
+							selected.push(checkboxes[i].id);
+	    				}
+				}
+		
+			
+					$.ajax({
+						type: 'POST',
+						url: "helpers/ajaxhelper.php",
+						data: {einschraenkung_id : selected},
+						success:(function(ID){
+							
+							$('[class^="taetigkeit"]').removeClass('hidden');
+
+							
+							var trimID = ID.trim();
+							var filteredTaetigkeiten =  trimID.split("clu");
+							
+								
+							
+							filteredTaetigkeiten.forEach(function(taetigkeit){
+								$("."+taetigkeit).removeClass('hidden');
+								$("."+taetigkeit).addClass('hidden');
+							});
+						})
+					});	
 					
-			}
-		else //bring back
-			{
 					
-				$.ajax({
-					type: 'POST',
-					url: "helpers/ajaxhelper.php",
-					data: {einschraenkung_id : id},
-					success:(function(ID){
-						var trimID = ID.trim();
-						var filteredTaetigkeiten =  trimID.split("clu");
-						
-						
-						filteredTaetigkeiten.forEach(function(taetigkeit){
-							$("."+taetigkeit).removeClass('hidden');
-						});
-					})	
-				});
-			}	
 	});
 });
 
@@ -137,6 +123,73 @@ if(this.checked) //delete
 					})	
 				});
 			}
+
+
+
+
+
+
+
+
+NEUER
+
+if(this.checked) //delete
+			{	
+				for (var i=0; i<checkboxes.length; i++) 
+			{
+				if (checkboxes[i].checked) 
+					{
+						selected.push(checkboxes[i].id);
+    				}
+			}
+					
+				$.ajax({
+					type: 'POST',
+					url: "helpers/ajaxhelper.php",
+					data: {einschraenkung_id : selected},
+					success:(function(ID){
+						
+						
+						
+						var trimID = ID.trim();
+						var filteredTaetigkeiten =  trimID.split("clu");
+						filteredTaetigkeiten.forEach(function(taetigkeit){
+							$("."+taetigkeit).addClass('hidden');
+						});
+					})
+				});	
+				
+					
+			}
+		
+		else() //bring back
+			{
+				for (var i=0; i<checkboxes.length; i++) 
+			{
+				if (checkboxes[i].checked) 
+					{
+						selected.push(checkboxes[i].id);
+    				}
+			}
+					
+				$.ajax({
+					type: 'POST',
+					url: "helpers/ajaxhelper.php",
+					data: {einschraenkung_id : selected},
+					success:(function(ID){
+						
+						var trimID = ID.trim();
+						var filteredTaetigkeiten =  trimID.split("clu");
+						
+						
+						filteredTaetigkeiten.forEach(function(taetigkeit){
+							$("."+taetigkeit).removeClass('hidden');
+						});
+					})	
+				});
+			}	
+
+
 
 
 

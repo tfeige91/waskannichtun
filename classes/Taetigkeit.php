@@ -45,11 +45,8 @@ class Taetigkeit{
 	public function filterByEinschraenkung($where){
 		
 		if($this->_input->exists('post'))
-			{	
-				/*$notThis = array_values($not);
+			{					
 				
-				foreach ($notThis as $where)
-				*/
 					{
 					
 						$query = "SELECT `id_taetigkeit` FROM taetigkeit_einschraenkung WHERE id_einschraenkung = {$where}";
